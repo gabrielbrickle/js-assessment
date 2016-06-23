@@ -70,25 +70,43 @@ exports.arraysAnswers = {
     },
 
     count: function(arr, item) { ///not working
-        arr.filter(function(element) {
-            if (element === item) {
-                return element.length;
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === item) {
+                count++;
             }
-        })
-        return arr;
+        }
+        return count;
     },
 
     duplicates: function(arr) {
-
-
+      var exists=[];
+      var dupes=[];
+      for (var i = 0; i < arr.length; i++) {
+        if(exists.indexOf(arr[i])=== -1) {
+          exists.push(arr[i]);
+        } else if (dupes.indexOf(arr[i]) === -1) {
+          dupes.push(arr[i])
+        }
+      }
+      return dupes;
     },
 
     square: function(arr) {
-        Math.pow(arr[index], 2);
-        return arr;
+      var newArray=[]
+      for (var i = 0; i < arr.length; i++) {
+        var power=Math.pow(arr[i],2);
+        newArray.push(power);
+      }
+      return newArray;
     },
 
     findAllOccurrences: function(arr, target) {
-
+      var newArray= [];
+      for (var i = 0; i < arr.length; i++) {
+        if (target === arr[i])
+        newArray.push(i);
+      }
+      return newArray;
     }
 };

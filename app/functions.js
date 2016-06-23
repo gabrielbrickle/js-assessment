@@ -2,14 +2,17 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.functionsAnswers = {
   argsAsArray: function(fn, arr) {
-
+    return fn.apply(this,arr);
   },
 
   speak: function(fn, obj) {
-
+    return fn.call(obj);
   },
 
   functionFunction: function(str) {
+      // return function(str) {
+      //
+      // }
 
   },
 
@@ -18,7 +21,10 @@ exports.functionsAnswers = {
   },
 
   partial: function(fn, str1, str2) {
-
+    // var partialFunciton = function (function) {
+    //   return function (fn, str1, str2)
+    // }
+    // return function;
   },
 
   useArguments: function() {
@@ -32,8 +38,7 @@ exports.functionsAnswers = {
   partialUsingArguments: function(fn) {
 
   },
+  //
+  // curryIt: function(fn) {////
 
-  curryIt: function(fn) {
-
-  }
 };

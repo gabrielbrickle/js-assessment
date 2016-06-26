@@ -6,9 +6,9 @@ exports.objectsAnswers = {
   },
 
   alterObjects: function(constructor, greeting) {
-    var obj1 = "";
-    var obj = "";
-    return constructor.call(greeting);
+    // var obj1 = "";
+    // var obj = "";
+    // return constructor.call(greeting);
 
   },
 

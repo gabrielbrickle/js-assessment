@@ -10,21 +10,29 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
-      // return function(str) {
-      //
-      // }
-
+      return function(str2) {
+      return  `${str}, ${str2}`
+      }
   },
 
   makeClosures: function(arr, fn) {
-
+    var funcs = [];
+    //create closure
+    var storedFunc = function(el) {
+      return function(){ return fn(el)}
+    };
+      for(var i =0; i<arr.length;i++) {
+        root = Math.pow(arr[i],2);
+        funcs.push(storedFunc(arr[i]));
+    }
+    return funcs;
   },
 
   partial: function(fn, str1, str2) {
-    // var partialFunciton = function (function) {
-    //   return function (fn, str1, str2)
-    // }
-    // return function;
+    var back = function(str3){
+      return fn(str1,str2,str3);
+    };
+    return back;
   },
 
   useArguments: function() {

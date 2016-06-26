@@ -3,7 +3,7 @@ exports = typeof window === 'undefined' ? global : window;
 exports.arraysAnswers = {
     indexOf: function(arr, item) {
         return arr.indexOf(item);
-        ///or
+        // /or
         // for ( var i = 0; i < arr.length; i++ ){
         //   if (arr[i]===index){
         //     return i;

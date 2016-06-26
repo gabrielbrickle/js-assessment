@@ -15,6 +15,8 @@ exports.numbersAnswers = {
   },
 
   multiply: function(a, b) {
-    return a * b;
+    var help = (a*10)*(b*10)/100;
+    return help;
+    console.log(help);
   }
 };
